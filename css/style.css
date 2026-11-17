@@ -46,6 +46,10 @@ body {
   stroke-linecap: round;
   transition: transform 1.2s ease;
 }
+.ray {
+  fill: var(--green);
+  stroke: none;
+}
 
 .sun.open .sun-svg { transform: rotate(180deg); }
 
