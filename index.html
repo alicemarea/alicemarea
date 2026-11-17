@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background:black; color:#00ff88; font-family:monospace;">
-  <h1>hello! this is my portfolio :)</h1>
+<body>
+  <main class="intro">
+
+    <div class="sun-wrap">
+      <button class="sun" id="sun" aria-label="Enter the portfolio">
+        <svg class="sun-svg" viewBox="0 0 400 400">
+  <circle cx="200" cy="200" r="38.25" />
+
+  <!-- quattro raggi a croce -->
+  <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" />
+  <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" transform="rotate(90 200 200)" />
+  <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" transform="rotate(180 200 200)" />
+  <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" transform="rotate(270 200 200)" />
+
+  <!-- quattro raggi diagonali -->
+  <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" />
+  <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" transform="rotate(90 200 200)" />
+  <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" transform="rotate(180 200 200)" />
+  <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" transform="rotate(270 200 200)" />
+</svg>
+      </button>
+
+      <nav class="menu" id="menu">
+        <a class="top" href="projects.html">Projects</a>
+        <a class="right" href="about.html">About</a>
+        <a class="bottom" href="cv.html">CV</a>
+        <a class="left" href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <p class="tagline">fragments of a memory, still assembling</p>
+    <p class="hint">click the sun to enter</p>
+
+  </main>
+  <script src="js/sun-menu.js"></script>
 </body>
 </html>
