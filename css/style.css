@@ -46,7 +46,7 @@ body {
   stroke-linecap: round;
   transition: transform 1.2s ease;
 }
-.ray {
+.sun-svg path {
   fill: var(--green);
   stroke: none;
 }
