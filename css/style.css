@@ -168,3 +168,65 @@ body {
 
 .site-footer a { color: var(--blue); text-decoration: none; }
 .site-footer a:hover { color: var(--green); }
+/* ---------- atmosphere ---------- */
+
+/* sfondo con un leggero bagliore blu in alto */
+body {
+  background: radial-gradient(ellipse at 50% 0%, rgba(42, 167, 255, 0.14), transparent 65%) fixed, var(--bg);
+}
+
+/* grana */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 1  0 0 0 0 .5  0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* linee di scansione, molto leggere */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(0, 0, 0, 0.18) 3px);
+}
+
+/* bagliore sul sole e sui testi */
+.sun-svg { filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.5)); }
+.page h1, .card h2, .button, .site-nav a { text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+
+/* titolo grande con cursore lampeggiante */
+.page h1 {
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  letter-spacing: 0.25em;
+  margin-bottom: 2rem;
+}
+
+.page h1::before { content: "> "; color: var(--blue); }
+.page h1::after  { content: "_"; animation: blink 1s steps(1) infinite; }
+
+@keyframes blink { 50% { opacity: 0; } }
+
+/* metadata come pannello */
+.meta {
+  padding: 1rem 1.5rem;
+  border-left: 2px solid var(--blue);
+  background: rgba(42, 167, 255, 0.06);
+}
+
+/* gallery con cornice luminosa */
+.gallery figure { border: 1px solid rgba(0, 255, 136, 0.5); box-shadow: 0 0 18px rgba(0, 255, 136, 0.12); }
+
+/* ingresso morbido della pagina */
+.page { animation: fadein 0.9s ease both; }
+@keyframes fadein { from { opacity: 0; transform: translateY(8px); } }
+
+/* rispetto per chi preferisce meno movimento */
+@media (prefers-reduced-motion: reduce) {
+  .page h1::after, .page { animation: none; }
+}
