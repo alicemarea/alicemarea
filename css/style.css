@@ -75,3 +75,10 @@ body {
 
 .tagline { margin: 2rem 0 0; }
 .hint { margin: 0; opacity: 0.5; font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+  .menu a {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+}
