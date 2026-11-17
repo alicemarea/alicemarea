@@ -25,7 +25,7 @@ body {
 
 .sun-wrap {
   position: relative;
-  width: min(55vmin, 380px);
+  width: min(70vmin, 460px);
   aspect-ratio: 1;
 }
 
@@ -42,7 +42,7 @@ body {
   height: 100%;
   fill: none;
   stroke: var(--green);
-  stroke-width: 3;
+  stroke-width: 3.5;
   stroke-linecap: round;
   transition: transform 1.2s ease;
 }
@@ -64,10 +64,10 @@ body {
 .menu.open a { opacity: 1; pointer-events: auto; }
 .menu a:hover { color: var(--green); }
 
-.menu .top    { top: -2rem;    left: 50%; transform: translateX(-50%); }
-.menu .bottom { bottom: -2rem; left: 50%; transform: translateX(-50%); }
-.menu .left   { left: -4.5rem;  top: 50%; transform: translateY(-50%); }
-.menu .right  { right: -4.5rem; top: 50%; transform: translateY(-50%); }
+.menu .top    { bottom: 87%; left: 50%; transform: translateX(-50%); }
+.menu .bottom { top: 87%;    left: 50%; transform: translateX(-50%); }
+.menu .left   { right: 87%;  top: 50%;  transform: translateY(-50%); }
+.menu .right  { left: 87%;   top: 50%;  transform: translateY(-50%); }
 
 .tagline { margin: 2rem 0 0; }
 .hint { margin: 0; opacity: 0.5; font-size: 0.8rem; }
