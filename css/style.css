@@ -230,3 +230,8 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .page h1::after, .page { animation: none; }
 }
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
