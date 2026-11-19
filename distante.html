@@ -6,22 +6,50 @@
   <title>Distante — Alice Marandola</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header class="site-header">
-    <a class="logo" href="index.html" aria-label="Back to entrance">
-      <img src="img/sun.svg" alt="Sun logo">
-    </a>
-    <nav class="site-nav">
-      <a href="san.html">San</a>
-      <a href="distante.html" aria-current="page">Distante</a>
-      <a href="polvere.html">Polvere</a>
-      <a href="untitled.html">(Untitled)</a>
-    </nav>
-  </header>
+  <nav class="site-nav">
+    <a href="san.html" >San</a>
+    <a href="distante.html"aria-current="page">Distante</a>
+    <a href="polvere.html">Polvere</a>
+    <a href="untitled.html">(Untitled)</a>
+  </nav>
+
+  <svg class="eye" id="eye" viewBox="0 0 100 50" aria-hidden="true">
+    <defs>
+      <clipPath id="eye-clip">
+        <path d="M4 25 Q50 -8 96 25 Q50 58 4 25 Z" />
+      </clipPath>
+    </defs>
+    <path class="eye-outline" d="M4 25 Q50 -8 96 25 Q50 58 4 25 Z" />
+    <g clip-path="url(#eye-clip)">
+      <g id="eye-iris">
+        <circle class="iris" cx="50" cy="25" r="13" />
+        <circle class="pupil" cx="50" cy="25" r="5" />
+      </g>
+    </g>
+  </svg>
+</header>
 
   <main class="page">
-    <h1>Distante</h1>
+    <div class="page-head">
+  <h1>Distante</h1>
+  <a class="logo" href="index.html" aria-label="Back to entrance">
+    <svg class="logo-sun" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="38.25" />
+      <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" />
+      <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" transform="rotate(90 200 200)" />
+      <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" transform="rotate(180 200 200)" />
+      <path class="ray" d="M200 70L204.33 160H195.67L200 70Z" transform="rotate(270 200 200)" />
+      <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" />
+      <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" transform="rotate(90 200 200)" />
+      <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" transform="rotate(180 200 200)" />
+      <path class="ray" d="M266.569 133.536L229.856 176.372L223.732 170.248L266.569 133.536Z" transform="rotate(270 200 200)" />
+    </svg>
+  </a>
+</div>
 
     <p class="lead">
       One or two sentences describing the project. Keep it short.
@@ -48,6 +76,7 @@
     <a href="https://instagram.com/alicemarea" target="_blank" rel="noopener">@alicemarea</a>
     <a href="mailto:alicemarandola.m@gmail.com">alicemarandola.m@gmail.com</a>
   </footer>
-
+<script src="js/eye.js"></script>
+  
 </body>
 </html>
