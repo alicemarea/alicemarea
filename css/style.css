@@ -277,4 +277,4 @@ body::after {
 }
 
 .logo-sun .ray { fill: var(--green); stroke: none; }
-.page { padding-top: 5rem; }
+.page { padding-top: 8rem; }
