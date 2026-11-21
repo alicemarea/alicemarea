@@ -257,7 +257,7 @@ body::after {
 
 .page-head {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   margin-bottom: 2rem;
@@ -267,14 +267,34 @@ body::after {
 
 .logo-sun {
   display: block;
-  width: clamp(64px, 9vw, 120px);
+  width: clamp(110px, 16vw, 200px);
   height: auto;
   aspect-ratio: 1;
   fill: none;
   stroke: var(--green);
   stroke-width: 4;
-  filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.45));
+  filter: drop-shadow(0 0 4px rgba(0, 255, 136, 0.5))
+          drop-shadow(0 0 12px rgba(0, 255, 136, 0.25));
+  animation: sun-glow 4s ease-in-out infinite;
 }
 
 .logo-sun .ray { fill: var(--green); stroke: none; }
 .page { padding-top: 5.5rem; }
+@keyframes sun-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 136, 0.5))
+            drop-shadow(0 0 12px rgba(0, 255, 136, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(0, 255, 136, 0.8))
+            drop-shadow(0 0 22px rgba(0, 255, 136, 0.45));
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-sun { width: 84px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-sun { animation: none; }
+}
