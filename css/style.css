@@ -308,3 +308,12 @@ body::after {
 .logline {
   margin: 0 0 2.5rem;
 }
+.logline,
+.lead {
+  margin-left: 8%;
+}
+
+@media (max-width: 700px) {
+  .logline,
+  .lead { margin-left: 0; }
+}
