@@ -85,9 +85,13 @@ body {
 /* ---------- project pages ---------- */
 
 .lead {
-  max-width: 60ch;
+  max-width: 55%;
   line-height: 1.6;
   margin: 0 0 2rem;
+}
+
+@media (max-width: 700px) {
+  .lead { max-width: 100%; }
 }
 
 .meta {
