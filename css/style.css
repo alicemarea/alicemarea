@@ -302,3 +302,6 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .logo-sun { animation: none; }
 }
+.logline {
+  margin: 0 0 2.5rem;
+}
