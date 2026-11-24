@@ -336,26 +336,3 @@ body::after {
   margin-right: 0.8rem;
   color: var(--blue);
 }
-.work-body {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 2rem 3rem;
-  align-items: start;
-  margin-bottom: 2rem;
-}
-
-.work-body .video {
-  max-width: none;
-  margin: 0 0 1.5rem;
-}
-
-.work-text .lead {
-  max-width: none;
-  margin-bottom: 0;
-}
-
-.work-body .meta { margin: 0 0 1.5rem; }
-
-@media (max-width: 800px) {
-  .work-text { grid-template-columns: 1fr; }
-}
