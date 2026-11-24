@@ -317,3 +317,22 @@ body::after {
   .logline,
   .lead { margin-left: 0; }
 }
+.work {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0, 255, 136, 0.25);
+}
+
+.work h2 {
+  margin: 0 0 1.5rem;
+  font-weight: normal;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+.work .num {
+  margin-right: 0.8rem;
+  color: var(--blue);
+}
